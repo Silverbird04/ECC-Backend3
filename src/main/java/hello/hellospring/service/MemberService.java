@@ -2,10 +2,12 @@ package hello.hellospring.service;
 // 회원 서비스 개발
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional; // JPA 추가
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional // JPA추가
 public class MemberService {
     /* 기존: 회원 서비스가 메모리 회원 리포지토리를 직접 생성
     private final MemberRepository memberRepository = new MemoryMemberRepository();

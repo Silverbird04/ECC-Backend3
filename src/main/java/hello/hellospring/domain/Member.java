@@ -1,6 +1,15 @@
 package hello.hellospring.domain;
 
+// JPA 추가
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity // 추가
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY- ID 자동 생성
     private Long id;
     private String name;
     public Long getId() {
